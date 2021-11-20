@@ -10,6 +10,17 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <nav style="padding: 4px 10px" class="navbar navbar-light bg-light justify-content-between">
+      <%= image_tag "projector.png", alt: "movie", width: 20 %>
+      <p style="margin: 0px; padding: 4px 10px">
+        <%= link_to new_list_path, class:"link" do %>
+          <i class="far fa-plus-square"></i>
+        <% end %>
+      </p>
+    </nav>
+    <div class="home-banner">
+      <h1>Save any kind of movies</h1>
+    </div>
     <%= yield %>
   </body>
 </html>

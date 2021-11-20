@@ -1,0 +1,19 @@
+<div class="container d-flex p-2 flex-column justify-content-between">
+  <div class="p-2">
+    <p><%= link_to "create new bookmark", new_list_bookmark_path(@list) %></p>
+  </div>
+  <h1 class="p-2"><%= @list.name %></h1>
+  <div class="card-deck p-2">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="card col-6">
+        <%= image_tag "#{bookmark.movie.poster_url}", alt: "movie", width: "200", class: "card-img-top"  %>
+        <div class="card-body">
+          <h5 class="card-title"><%= bookmark.movie.title %></h5>
+        </div>
+      </div>
+    <% end  %>
+  </div>
+  <div class="p-2">
+    <p><%= link_to "Back", lists_path %></p>
+  </div>
+</div>
