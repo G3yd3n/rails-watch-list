@@ -5,7 +5,7 @@
   <h1 class="p-2"><%= @list.name %></h1>
   <div class="card-deck p-2">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="card col-6">
+      <div class="card col-6 col-sm-6">
         <%= image_tag "#{bookmark.movie.poster_url}", alt: "movie", width: "200", class: "card-img-top"  %>
         <div class="card-body">
           <h5 class="card-title"><%= bookmark.movie.title %></h5>
