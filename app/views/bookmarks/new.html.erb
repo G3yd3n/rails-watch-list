@@ -1,6 +1,2 @@
 <!-- app/views/reviews/new.html.erb -->
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit "Create new Bookmark", class: "btn btn-primary" %>
-<% end %>
+<%= render 'form' %>

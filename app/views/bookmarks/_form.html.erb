@@ -1,0 +1,5 @@
+<%= simple_form_for [ @list, @list.bookmarks.build] do |f| %>
+  <%= f.association :movie, collection: Movie.all.order(:title), prompt: 'Select a movie', input_html: { class: 'select2 js-example-basic-multiple' } %>
+  <%= f.input :comment %>
+  <%= f.submit "Add a movie", class: "btn btn-primary" %>
+<% end %>
