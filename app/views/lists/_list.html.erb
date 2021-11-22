@@ -1,6 +1,5 @@
 
 <div class="card bg-dark text-white m-1">
-  <%= image_tag "bannerPicture.jpeg", alt: "movie", width: "200", class: "card-img"  %>
   <div class="card-img-overlay text-center" style="width: 140px; margin: 0 auto;">
     <h5><%= link_to list.name, list_path(list), class: "text-info" %></h5>
     <%= link_to edit_list_path(list), class: "text-info" do %>
