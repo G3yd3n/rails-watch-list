@@ -5,7 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    # @bookmark = Bookmark.new
+    @bookmark = Bookmark.new
   end
 
   def edit
@@ -28,7 +28,7 @@ class ListsController < ApplicationController
   def update
     @list = List.find(params[:id])
     @list.update(list_params)
-    redirect_to lists_path
+    redirect_to root_path
   end
 
   private

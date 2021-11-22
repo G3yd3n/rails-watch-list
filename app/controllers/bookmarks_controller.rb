@@ -11,9 +11,8 @@ class BookmarksController < ApplicationController
     if @bookmark.save
       redirect_to list_path(@list)
     else
-      render html: helpers.tag.strong('No same movie can be added into a bookmark!')
-      # render status: 500
-
+      # raise
+      render html: helpers.tag.strong('Comment needs at least 6 character, and no same movie can be added')
     end
   end
 
